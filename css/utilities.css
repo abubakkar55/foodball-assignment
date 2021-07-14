@@ -13,6 +13,7 @@
     margin-bottom: 50px;
     position: relative;
     word-spacing: 5px;
+    color: #E02C6D;
 }
 
 .section-heading::before {
@@ -103,11 +104,15 @@
     justify-content: space-between;
 }
 
+.d-flex-fd-c {
+    flex-direction: column;
+}
+
 /* animation */
 
 @keyframes zoom-in {
     0% {
-        transform: scale(0, 0);
+        transform: scale(.3, .3);
     }
 
     100% {
