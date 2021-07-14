@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -52,7 +56,7 @@ a {
 
 /* highlights Start  */
 .highlights {
-    padding: 73px 0;
+    padding: 20px 0 45px;
 }
 
 .highlights__container {
@@ -79,51 +83,72 @@ a {
 
 /* highlights End  */
 
-
-
-
-/* footer */
-.footer__logo img{
-width: 483px;
-height: 110px;
+/* worldcup */
+.worldcup {
+    margin: 50px 0;
+    height: 80vh;
+    background-image: url(../images/banner/world-cup-2022.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer__social, .footer_copyright{
-    margin: 20px 0;
+.worldcup::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.397);
+    z-index: 5;
 }
 
-.footer__social a{
-    display: inline-block;
-    margin: 0 10px;
-   text-align: center;
-padding: 10px;
-background-color: #969BAB;
-border-radius: 50px;
-color: #E7E7E8;
-font-size: 18px;
+.worldcup .worldcup__info {
+    padding: 0 200px;
+    text-align: center;
+    position: relative;
+    z-index: 55;
+    color: #FFFFFF;
 }
+
+.worldcup h1 {
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.479);
+    font-size: 50px;
+}
+
+.worldcup__info .worldcup__descrip {
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.61);
+    margin: 15px 0 30px;
+    word-spacing: 2px;
+}
+
 
 /* contact */
-.contact{
-padding: 0 0 150px;
-}
-.contact__container{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 50px;
-   align-items: center;
+.contact {
+    padding: 0 0 100px;
 }
 
-.contact__banner img{
+.contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+.contact__banner img {
     width: 100%;
     height: 420px;
 }
 
-::placeholder{
+::placeholder {
     font-family: 'Poppins', sans-serif;
 }
 
-.contact__form{
+.contact__form {
     font-family: 'Poppins', sans-serif;
     background-color: #FEFEFE;
     padding: 20px;
@@ -131,16 +156,16 @@ padding: 0 0 150px;
     border-radius: 10px;
 }
 
-.contact__form button.btn{
+.contact__form button.btn {
     font-family: 'Poppins', sans-serif;
-border: 0;
+    border: 0;
 }
 
-.contact__input{
+.contact__input {
     /*border-top: 0;
     border-left: 0;
     border-right: 0;*/
-    border:  2px solid #969BAB;
+    border: 2px solid #969BAB;
     outline: 0;
     padding: 15px 20px;
     margin: 20px 0;
@@ -148,8 +173,33 @@ border: 0;
     width: 100%;
 }
 
-.contact__input:focus{
+.contact__input:focus {
     border: 2px solid #2d25a0;
+}
+
+
+
+
+/* footer */
+.footer__logo img {
+    width: 483px;
+    height: 110px;
+}
+
+.footer__social,
+.footer_copyright {
+    margin: 20px 0;
+}
+
+.footer__social a {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: #969BAB;
+    border-radius: 50px;
+    color: #E7E7E8;
+    font-size: 18px;
 }
 
 /* Media Quries */
@@ -174,19 +224,37 @@ border: 0;
     }
 
     /* contact */
-
-    .contact__banner img{
+    .contact__banner img {
         height: 350px;
-     }
+    }
+
+    /* world cup */
+    .worldcup .worldcup__info{
+        padding: 0 50px;
+    }
 }
 
 /*For Mobile*/
 @media screen and (max-width:639px) {
 
+    /* section-heading */
+    h1.section-heading {
+        font-size: 30px;
+    }
+
+    h1.section-heading::before {
+        width: 100px;
+    }
+
     /* player section */
     .players {
         padding: 50px 0;
     }
+
+    .player .player__info h3{
+font-size: 24px;
+    }
+
 
     .players__container,
     .highlights__container {
@@ -196,7 +264,7 @@ border: 0;
     /* highlights section */
 
     .highlights {
-        padding: 0 0 50px ;
+        padding: 0 0 50px;
     }
 
     .highlights__container {
@@ -217,23 +285,45 @@ border: 0;
         height: 248px;
     }
 
+/* world cup */
+.worldcup{
+    height: 100vh;
+}
+.worldcup .worldcup__info{
+    padding: 0 15px;
+}
+.worldcup .worldcup__info h1{
+   font-size: 35px;
+   line-height: 40px;
+}
+
+.worldcup .worldcup__descrip{
+    margin: 13px 0;
+line-height: 20px;
+}
+
     /* contact */
-    .contact__container{
+    .contact {
+        padding: 0 0 50px;
+    }
+
+    .contact__container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-     }
+    }
 
-     .contact__banner img{
-        height: 100%;;
-     }
-     
+    .contact__banner img {
+        height: 100%;
+        ;
+    }
 
 
-/* Footer */
-.footer__logo img{
-    width: 250px;
-    height: 80px;
-}
+
+    /* Footer */
+    .footer__logo img {
+        width: 250px;
+        height: 80px;
+    }
 
 }

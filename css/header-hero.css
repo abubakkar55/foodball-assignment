@@ -11,7 +11,7 @@
 .header__hamburger {
     cursor: pointer;
     z-index: 20;
-   
+
 }
 
 .header__hamburger span {
@@ -90,7 +90,7 @@
     margin-bottom: 27px;
 }
 
-.hero__text{
+.hero__text {
     animation: from-left 1.5s 0.1s linear;
 }
 
@@ -99,6 +99,7 @@
     animation: zoom-in 2s 0.1s linear;
     transition: transform 0.5s ease-in-out;
 }
+
 .hero__banner img:hover {
     transform: translateY(-20px);
 }
@@ -157,13 +158,6 @@
 /* only for mobile screen */
 @media screen and (max-width: 639px) {
 
-    /* section-heading */
-    h1.section-heading{
-        font-size: 30px;
-    }
-    h1.section-heading::before{
-        width: 100px;
-    }
     .header {
         padding: 20px 10px;
     }
@@ -175,7 +169,7 @@
     .hero__banner img:hover {
         transform: none;
     }
-    
+
     .header .header__navbar ul li a {
         font-size: 15px;
     }
