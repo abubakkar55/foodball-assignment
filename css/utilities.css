@@ -1,0 +1,82 @@
+/* container*/
+
+.container {
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Font */
+
+.description-lg {
+    font-weight: 400;
+    line-height: 26px;
+    color: #6C6C6C;
+    margin: 10px 0;
+}
+
+.description-xl {
+    font-weight: 400;
+    line-height: 28px;
+    color: #6C6C6C;
+}
+
+.font-lg {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 10px 0;
+}
+
+.font-xl {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+/* button */
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: #E02C6D;
+    font-size: 16px;
+    color: #ffffff;
+    transition: transform 0.5s ease-in;
+}
+
+.btn:hover {
+    transform: scale(.95);
+}
+
+.btn>img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    
+}
+
+.btn>i {
+    margin-left: 8px;
+}
+
+/* Display Flex */
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-ai-c {
+    align-items: center;
+}
+
+.d-flex-jc-c {
+    justify-content: center;
+}
+
+.d-flex-jc-sb {
+    justify-content: space-between;
+}

@@ -1,0 +1,141 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* player Section Start */
+
+.players {
+    background-color: #FEFEFE;
+    padding: 73px 0;
+}
+
+.players__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.player {
+    transition: transform 0.6s ease-in;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player:hover {
+    transform: scale(1.05);
+}
+
+.player__banner img {
+    width: 100%;
+    height: 256px;
+}
+
+/* player Section End */
+
+/* highlights Start  */
+.highlights {
+    padding: 73px 0;
+}
+
+.highlights__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 66px;
+    align-items: center;
+}
+
+.highlights__text h1 {
+    font-size: 46px;
+    line-height: 60px;
+    margin: 8px 0;
+}
+
+.highlights__text a.btn {
+    margin-top: 24px;
+}
+
+.highlights__banner img {
+    width: 100%;
+    height: 427px;
+}
+
+/* highlights End  */
+
+/* Media Quries */
+
+/*For Tablets*/
+@media screen and (min-width:640px) and (max-width:1023px) {
+    .players__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlights .highlights__container {
+        gap: 40px;
+    }
+
+    .highlights__text h1 {
+        font-size: 35px;
+    }
+
+    .highlights .highlights__banner img {
+        width: 100%;
+        height: 260px;
+    }
+}
+
+/*For Mobile*/
+@media screen and (max-width:639px) {
+
+    /* player section */
+    .players {
+        padding: 50px 0;
+    }
+
+    .players__container,
+    .highlights__container {
+        grid-template-columns: 1fr;
+    }
+
+    /* highlights section */
+
+    .highlights {
+        padding: 0 0 50px ;
+    }
+
+    .highlights__container {
+        gap: 35px;
+    }
+
+    .highlights__text {
+        text-align: center;
+    }
+
+    .highlights__text h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .highlights .highlights__banner .highlights__img {
+        width: 100%;
+        height: 248px;
+    }
+
+}
