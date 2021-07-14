@@ -156,15 +156,7 @@ a {
     border-radius: 10px;
 }
 
-.contact__form button.btn {
-    font-family: 'Poppins', sans-serif;
-    border: 0;
-}
-
 .contact__input {
-    /*border-top: 0;
-    border-left: 0;
-    border-right: 0;*/
     border: 2px solid #969BAB;
     outline: 0;
     padding: 15px 20px;
@@ -173,12 +165,22 @@ a {
     width: 100%;
 }
 
+.contact__form input, button.btn{
+    border-radius: 50px;
+}
+.contact__form textarea{
+    border-radius: 10px;
+}
+
+.contact__form button.btn {
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    padding: 10px 40px;
+}
+
 .contact__input:focus {
     border: 2px solid #2d25a0;
 }
-
-
-
 
 /* footer */
 .footer__logo img {

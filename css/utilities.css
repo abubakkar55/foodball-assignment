@@ -18,7 +18,7 @@
 
 .section-heading::before {
     position: absolute;
-    bottom: -15px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     content: "";
